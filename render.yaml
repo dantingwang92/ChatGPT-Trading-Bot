@@ -1,0 +1,16 @@
+services:
+- type: web
+  name: ChatGPT-Trading-Bot
+  env: python
+  repo: https://github.com/dantingwang92/ChatGPT-Trading-Bot.git
+  buildCommand: pip install gunicorn -r requirements.txt
+  startCommand: gunicorn app:app
+  plan: free
+  autoDeploy: false
+  envVars:
+  - key: API_KEY
+    sync: false
+  - key: API_SECRET_KEY
+    sync: false
+  - key: PASSPHRASE
+    sync: false
