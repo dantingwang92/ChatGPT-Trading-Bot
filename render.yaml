@@ -4,7 +4,7 @@ services:
   env: python
   repo: https://github.com/dantingwang92/ChatGPT-Trading-Bot.git
   buildCommand: pip install gunicorn -r requirements.txt
-  startCommand: gunicorn app:app
+  startCommand: gunicorn main:app
   plan: free
   autoDeploy: false
   envVars:
